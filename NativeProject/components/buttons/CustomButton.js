@@ -1,6 +1,7 @@
 import React from 'react';
 import {Image, TouchableOpacity, StyleSheet} from 'react-native';
 import Images from '../../appearance/Images';
+import imgColors from '../../appearance/imgColors';
 const CustomButton = ({title, onPress, buttonColor, buttonStyle}) => {
   return (
     <TouchableOpacity
@@ -9,13 +10,11 @@ const CustomButton = ({title, onPress, buttonColor, buttonStyle}) => {
         ...(buttonStyle || {
           width: 25,
           aspectRatio: 1 / 1,
-          borderWidth: 1,
-          borderRadius: 2,
         }),
         backgroundColor: buttonColor || '#f8f8f8',
       }}
       onPress={onPress}>
-      <Image source={Images[title]} />
+      <Image tintColor={imgColors[title]} source={Images[title]} />
     </TouchableOpacity>
   );
 };

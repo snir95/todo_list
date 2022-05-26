@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
+import imgColors from '../appearance/imgColors';
 import {useCreateTaskMutation} from '../services/task';
 const AddItem = () => {
   const [createTask, createResult] = useCreateTaskMutation();
@@ -30,7 +31,10 @@ const AddItem = () => {
         defaultValue={text}
       />
       <TouchableOpacity onPress={() => handleSubmit(text)} style={styles.btn}>
-        <Image source={require('../assets/add.png')} />
+        <Image
+          tintColor={imgColors.create}
+          source={require('../assets/add.png')}
+        />
         <Text style={styles.btnText}>Add</Text>
       </TouchableOpacity>
     </View>
