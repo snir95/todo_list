@@ -26,7 +26,8 @@ const axiosBaseQuery =
 const taskApi = createApi({
   reducerPath: 'taskApi',
   baseQuery: axiosBaseQuery({
-    baseUrl: 'http://10.0.0.27:3009',
+    //fill your ip here+port\connect your phone
+//   baseUrl: 'http://xxx.xxx.xxx.xxx:3009',
   }),
   tagTypes: ['Task'],
   endpoints: builder => ({
